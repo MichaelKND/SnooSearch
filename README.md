@@ -85,7 +85,7 @@ SnooSearch reads a .csv file that lists the metadata of the posts, manipulating 
 
 
 
-Reference Materials
+# Reference Materials
 
    - Lundh, Fredrik. “An Introduction to Tkinter (Work in Progress).” Effbot.Org, 2019, effbot.org/tkinterbook/.
 
