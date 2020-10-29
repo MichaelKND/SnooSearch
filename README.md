@@ -10,13 +10,21 @@ Reddit is an online forum comprised of subforums, called subreddits. Each subred
 
 •	What is SnooSearch?
 SnooSearch is a program that takes in information about posts from a particular subreddit and displays information about each post. Metadata includes:
+
 o	Post title
+
 o	Post author
+
 o	Post date
+
 o	Post vote ratio
+
 o	Number of comments on the post
+
 o	Post score
+
 o	If the post was edited or not
+
 o	URL directly to the post.
 
 •	What is “the data”?
@@ -33,29 +41,49 @@ o	Selecting “Go to Post” while a post is loaded will open a browser window t
 o	On the right, posts may be sorted and filtered in several ways.
 
   	Sort by Title sorts in descending alphanumeric order (0-9, A-Z).
+  
   	Sort by Ratio sorts by ascending upvote ratio order.
+  
   	Sort by Score sorts by ascending score order.
+  
   	Sort by Author sorts by descending alphanumeric author order.
+  
   	Filter Edited displays only posts that were edited by the author after initial posting.
+  
   	Filter Unedited shows posts that were not edited after initial posting.
+  
   	Entering a string into the topmost entry box and selecting the adjacent “Search For Title” button will search the posts whose title contains the string.
+  
   	Likewise, entering a string in the lower entry box and selecting “Search For Author” will search for posts whose author’s name contains the entered string.
+  
 
 Version Update
+
 •	1.0 – Initial Release
+
 o	Current Features:
+
 o	List posts in dedicated display window
+
 o	Load post information based on selected post.
+
 o	Sort by title, ratio, score, and author name.
+
 o	Filter for edited and unedited posts.
+
 o	Open a browser window with the loaded post’s URL.
  
 Future Plans
+
 •	Add a key column that shows the category of relevance when a user sorts or filters.
+
 •	Add a error functionality when there is no post selected and the user tries to load post information.
 
 
 
+
 Reference Materials
+
 •	Lundh, Fredrik. “An Introduction to Tkinter (Work in Progress).” Effbot.Org, 2019, effbot.org/tkinterbook/.
+
 •	“W3Schools Online Web Tutorials.” W3schools.Com, 2019, www.w3schools.com.
