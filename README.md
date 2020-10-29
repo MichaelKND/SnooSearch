@@ -11,21 +11,21 @@ Reddit is an online forum comprised of subforums, called subreddits. Each subred
 •	What is SnooSearch?
 SnooSearch is a program that takes in information about posts from a particular subreddit and displays information about each post. Metadata includes:
 
-  o	Post title
+   o	Post title
 
-  o	Post author
+   o	Post author
 
-  o	Post date
+   o	Post date
 
-  o	Post vote ratio
+   o	Post vote ratio
 
-  o	Number of comments on the post
+   o	Number of comments on the post
 
-  o	Post score
+   o	Post score
 
-  o	If the post was edited or not
+   o	If the post was edited or not
 
-  o	URL directly to the post.
+   o	URL directly to the post.
 
 •	What is “the data”?
 For the purposes of this class, a subset of 50 posts were pulled as a dataset from the top posts of the subreddit /r/learnpython on September 30th, 2020. This allows for easier assert statements and a constant dataset. Information collected is comprised only of the above listed metadata, and all information is publicly available by visiting the /r/learnpython subreddit and sorting for the “top” posts.
