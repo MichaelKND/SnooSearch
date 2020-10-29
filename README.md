@@ -60,7 +60,7 @@ SnooSearch reads a .csv file that lists the metadata of the posts, manipulating 
       - Likewise, entering a string in the lower entry box and selecting “Search For Author” will search for posts whose author’s name contains the entered string.
   
 
-# Version Update
+# Version History
 
 ## 1.0 – Initial Release
 
