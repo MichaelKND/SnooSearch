@@ -4,6 +4,7 @@ Obtains subreddit information and allows for basic parsing.
 SnooSearch – A Reddit Parser
 ________________________________________
 User Guide
+
 •	What is Reddit?
 Reddit is an online forum comprised of subforums, called subreddits. Each subreddit is dedicated to a particular subject, ranging from general topics such as world news, science, or technology to more niche subjects such as subreddits dedicated to a particular college or programming language. Posts to each subreddit are voted on by users and tagged with metadata. Reddit’s algorithm then uses those votes, alongside metadata such as the date, to keep the subreddit filled with relevant and topical posts.
 
