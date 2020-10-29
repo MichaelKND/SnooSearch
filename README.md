@@ -27,7 +27,7 @@ SnooSearch is a program that takes in information about posts from a particular 
 
    - URL directly to the post.
 
-### What is “the data”?
+# What is “the data”?
 
 For the purposes of this class, a subset of 50 posts were pulled as a dataset from the top posts of the subreddit /r/learnpython on September 30th, 2020. This allows for easier assert statements and a constant dataset. Information collected is comprised only of the above listed metadata, and all information is publicly available by visiting the /r/learnpython subreddit and sorting for the “top” posts.
 
