@@ -1,31 +1,29 @@
-# SnooSearch
+# SnooSearch: A Reddit Parser
 Obtains subreddit information and allows for basic parsing.
-
-SnooSearch – A Reddit Parser
 ________________________________________
 User Guide
 
-•	What is Reddit?
+##What is Reddit?
 Reddit is an online forum comprised of subforums, called subreddits. Each subreddit is dedicated to a particular subject, ranging from general topics such as world news, science, or technology to more niche subjects such as subreddits dedicated to a particular college or programming language. Posts to each subreddit are voted on by users and tagged with metadata. Reddit’s algorithm then uses those votes, alongside metadata such as the date, to keep the subreddit filled with relevant and topical posts.
 
-•	What is SnooSearch?
+##What is SnooSearch?
 SnooSearch is a program that takes in information about posts from a particular subreddit and displays information about each post. Metadata includes:
 
-   o	Post title
+   -Post title
 
-   o	Post author
+   -Post author
 
-   o	Post date
+   -Post date
 
-   o	Post vote ratio
+   -Post vote ratio
 
-   o	Number of comments on the post
+   -Number of comments on the post
 
-   o	Post score
+   -Post score
 
-   o	If the post was edited or not
+   -If the post was edited or not
 
-   o	URL directly to the post.
+   -URL directly to the post.
 
 •	What is “the data”?
 For the purposes of this class, a subset of 50 posts were pulled as a dataset from the top posts of the subreddit /r/learnpython on September 30th, 2020. This allows for easier assert statements and a constant dataset. Information collected is comprised only of the above listed metadata, and all information is publicly available by visiting the /r/learnpython subreddit and sorting for the “top” posts.
