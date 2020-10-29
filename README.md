@@ -27,34 +27,37 @@ SnooSearch is a program that takes in information about posts from a particular 
 
    - URL directly to the post.
 
-•	What is “the data”?
+## What is “the data”?
+
 For the purposes of this class, a subset of 50 posts were pulled as a dataset from the top posts of the subreddit /r/learnpython on September 30th, 2020. This allows for easier assert statements and a constant dataset. Information collected is comprised only of the above listed metadata, and all information is publicly available by visiting the /r/learnpython subreddit and sorting for the “top” posts.
 
-•	What requirements are needed?
+## What requirements are needed?
+
 SnooSearch was built on Python version 3.8.2 and is confirmed to work for that version. Older versions may not be compatible. Otherwise, SnooSearch uses entirely built in Python libraries and does not currently require pre-installed libraries.
 
-•	How does it work?
-SnooSearch reads a .csv file that lists the metadata of the posts, manipulating and sorting it for easier readability as well as adding search functions.
-o	Clicking the “Load Posts” Button will refresh the top left display box with the list of posts loaded from a “dataset.csv” file. Posts are initially listed in descending order as shown on the /r/learnpython subreddit “top” listing.
-o	Selecting a post and clicking “View Post Information” will load the selected post’s metadata into the metadata display below. 
-o	Selecting “Go to Post” while a post is loaded will open a browser window to the selected post on the subreddit /r/learnpython.
-o	On the right, posts may be sorted and filtered in several ways.
+## How does it work?
 
-  	Sort by Title sorts in descending alphanumeric order (0-9, A-Z).
+SnooSearch reads a .csv file that lists the metadata of the posts, manipulating and sorting it for easier readability as well as adding search functions.
+   - Clicking the “Load Posts” Button will refresh the top left display box with the list of posts loaded from a “dataset.csv” file. Posts are initially listed in descending       order as shown on the /r/learnpython subreddit “top” listing.
+   - Selecting a post and clicking “View Post Information” will load the selected post’s metadata into the metadata display below. 
+   - Selecting “Go to Post” while a post is loaded will open a browser window to the selected post on the subreddit /r/learnpython.
+   - On the right, posts may be sorted and filtered in several ways.
+
+      - Sort by Title sorts in descending alphanumeric order (0-9, A-Z).
   
-  	Sort by Ratio sorts by ascending upvote ratio order.
+      - Sort by Ratio sorts by ascending upvote ratio order.
   
-  	Sort by Score sorts by ascending score order.
+      - Sort by Score sorts by ascending score order.
   
-  	Sort by Author sorts by descending alphanumeric author order.
+      - Sort by Author sorts by descending alphanumeric author order.
   
-  	Filter Edited displays only posts that were edited by the author after initial posting.
+      - Filter Edited displays only posts that were edited by the author after initial posting.
   
-  	Filter Unedited shows posts that were not edited after initial posting.
+      - Filter Unedited shows posts that were not edited after initial posting.
   
-  	Entering a string into the topmost entry box and selecting the adjacent “Search For Title” button will search the posts whose title contains the string.
+      - Entering a string into the topmost entry box and selecting the adjacent “Search For Title” button will search the posts whose title contains the string.
   
-  	Likewise, entering a string in the lower entry box and selecting “Search For Author” will search for posts whose author’s name contains the entered string.
+      - Likewise, entering a string in the lower entry box and selecting “Search For Author” will search for posts whose author’s name contains the entered string.
   
 
 Version Update
