@@ -31,6 +31,7 @@ o	Clicking the “Load Posts” Button will refresh the top left display box wit
 o	Selecting a post and clicking “View Post Information” will load the selected post’s metadata into the metadata display below. 
 o	Selecting “Go to Post” while a post is loaded will open a browser window to the selected post on the subreddit /r/learnpython.
 o	On the right, posts may be sorted and filtered in several ways.
+
   	Sort by Title sorts in descending alphanumeric order (0-9, A-Z).
   	Sort by Ratio sorts by ascending upvote ratio order.
   	Sort by Score sorts by ascending score order.
