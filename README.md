@@ -44,7 +44,6 @@ SnooSearch reads a .csv file that lists the metadata of the posts, manipulating 
    - On the right, posts may be sorted and filtered in several ways.
 
       - Sort by Title sorts in descending alphanumeric order (0-9, A-Z).
-  
       - Sort by Ratio sorts by ascending upvote ratio order.
   
       - Sort by Score sorts by ascending score order.
