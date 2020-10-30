@@ -31,54 +31,37 @@ SnooSearch was built on Python version 3.8.2 and is confirmed to work for that v
 # How does it work?
 
 SnooSearch reads a .csv file that lists the metadata of the posts, manipulating and sorting it for easier readability as well as adding search functions.
-   - Clicking the “Load Posts” Button will refresh the top left display box with the list of posts loaded from a “dataset.csv” file. Posts are initially listed in descending       order as shown on the /r/learnpython subreddit “top” listing.
-   - Selecting a post and clicking “View Post Information” will load the selected post’s metadata into the metadata display below. 
-   - Selecting “Go to Post” while a post is loaded will open a browser window to the selected post on the subreddit /r/learnpython.
-   - On the right, posts may be sorted and filtered in several ways.
-
-      - Sort by Title sorts in descending alphanumeric order (0-9, A-Z).
-      - Sort by Ratio sorts by ascending upvote ratio order.
-  
-      - Sort by Score sorts by ascending score order.
-  
-      - Sort by Author sorts by descending alphanumeric author order.
-  
-      - Filter Edited displays only posts that were edited by the author after initial posting.
-  
-      - Filter Unedited shows posts that were not edited after initial posting.
-  
-      - Entering a string into the topmost entry box and selecting the adjacent “Search For Title” button will search the posts whose title contains the string.
-  
-      - Likewise, entering a string in the lower entry box and selecting “Search For Author” will search for posts whose author’s name contains the entered string.
+    - Clicking the “Load Posts” Button will refresh the top left display box with the list of posts loaded from a “dataset.csv” file. Posts are initially listed in descending       order as shown on the /r/learnpython subreddit “top” listing.
+    - Selecting a post and clicking “View Post Information” will load the selected post’s metadata into the metadata display below. 
+    - Selecting “Go to Post” while a post is loaded will open a browser window to the selected post on the subreddit /r/learnpython.
+    - On the right, posts may be sorted and filtered in several ways.
+         - Sort by Title sorts in descending alphanumeric order (0-9, A-Z).
+         - Sort by Ratio sorts by ascending upvote ratio order.
+         - Sort by Score sorts by ascending score order.
+         - Sort by Author sorts by descending alphanumeric author order.
+         - Filter Edited displays only posts that were edited by the author after initial posting.
+         - Filter Unedited shows posts that were not edited after initial posting.
+         - Entering a string into the topmost entry box and selecting the adjacent “Search For Title” button will search the posts whose title contains the string.
+         - Likewise, entering a string in the lower entry box and selecting “Search For Author” will search for posts whose author’s name contains the entered string.
   
 
 # Version History
 
 ## 1.0 – Initial Release
-
-   - Current Features:
-
-   - List posts in dedicated display window
-
-   - Load post information based on selected post.
-
-   - Sort by title, ratio, score, and author name.
-
-   - Filter for edited and unedited posts.
-
-   - Open a browser window with the loaded post’s URL.
+    - Current Features:
+    - List posts in dedicated display window
+    - Load post information based on selected post.
+    - Sort by title, ratio, score, and author name.
+    - Filter for edited and unedited posts
+    - Open a browser window with the loaded post’s URL.
  
 # Future Plans
-
-   - Add a key column that shows the category of relevance when a user sorts or filters.
-
-   - Add a error functionality when there is no post selected and the user tries to load post information.
+    - Add a key column that shows the category of relevance when a user sorts or filters.
+    - Add a error functionality when there is no post selected and the user tries to load post information.
 
 
 
 
 # Reference Materials
-
-   - Lundh, Fredrik. “An Introduction to Tkinter (Work in Progress).” Effbot.Org, 2019, effbot.org/tkinterbook/.
-
-   - “W3Schools Online Web Tutorials.” W3schools.Com, 2019, www.w3schools.com.
+    - Lundh, Fredrik. “An Introduction to Tkinter (Work in Progress).” Effbot.Org, 2019, effbot.org/tkinterbook/.
+    - “W3Schools Online Web Tutorials.” W3schools.Com, 2019, www.w3schools.com.
