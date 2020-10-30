@@ -11,21 +11,14 @@ Reddit is an online forum comprised of subforums, called subreddits. Each subred
 
 SnooSearch is a program that takes in information about posts from a particular subreddit and displays information about each post. Metadata includes:
 
-   - Post title
-
-   - Post author
-
-   - Post date
-
-   - Post vote ratio
-
-   - Number of comments on the post
-
-   - Post score
-
-   - If the post was edited or not
-
-   - URL directly to the post.
+    - Post title
+    - Post author
+    - Post date
+    - Post vote ratio
+    - Number of comments on the post
+    - Post score
+    - If the post was edited or not
+    - URL directly to the post.
 
 # What is “the data”?
 
