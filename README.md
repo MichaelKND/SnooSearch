@@ -7,6 +7,13 @@ ________________________________________
 
 Reddit is an online forum comprised of subforums, called subreddits. Each subreddit is dedicated to a particular subject, ranging from general topics such as world news, science, or technology to more niche subjects such as subreddits dedicated to a particular college or programming language. Posts to each subreddit are voted on by users and tagged with metadata. Reddit’s algorithm then uses those votes, alongside metadata such as the date, to keep the subreddit filled with relevant and topical posts.
 
+# Requirements
+
+SnooSearch requires PRAW, which is a Python-based API wrapper for Reddit's API. It can be installed via pip:
+
+pip install praw
+pip install --upgrade praw (to update to the latest version)
+
 # What is SnooSearch?
 
 SnooSearch is a program that takes in information about posts from a particular subreddit and displays information about each post. Metadata includes:
@@ -19,10 +26,11 @@ SnooSearch is a program that takes in information about posts from a particular 
     - Post score
     - If the post was edited or not
     - URL directly to the post.
+    - ADDED : Content of the post.
 
 # What is “the data”?
 
-For the purposes of this class, a subset of 50 posts were pulled as a dataset from the top posts of the subreddit /r/learnpython on September 30th, 2020. This allows for easier assert statements and a constant dataset. Information collected is comprised only of the above listed metadata, and all information is publicly available by visiting the /r/learnpython subreddit and sorting for the “top” posts.
+The previous version of the program pulled data from a collection of 50 posts. The program now is able to access Reddit's API directly, and thus "the data" is Reddit itself. Be aware that this data can change freely as the hour changes, so time is important when referencing this data.
 
 # What requirements are needed?
 
@@ -30,19 +38,13 @@ SnooSearch was built on Python version 3.8.2 and is confirmed to work for that v
 
 # How does it work?
 
-SnooSearch reads a .csv file that lists the metadata of the posts, manipulating and sorting it for easier readability as well as adding search functions.
-    - Clicking the “Load Posts” Button will refresh the top left display box with the list of posts loaded from a “dataset.csv” file. Posts are initially listed in descending       order as shown on the /r/learnpython subreddit “top” listing.
-    - Selecting a post and clicking “View Post Information” will load the selected post’s metadata into the metadata display below. 
-    - Selecting “Go to Post” while a post is loaded will open a browser window to the selected post on the subreddit /r/learnpython.
-    - On the right, posts may be sorted and filtered in several ways.
-         - Sort by Title sorts in descending alphanumeric order (0-9, A-Z).
-         - Sort by Ratio sorts by ascending upvote ratio order.
-         - Sort by Score sorts by ascending score order.
-         - Sort by Author sorts by descending alphanumeric author order.
-         - Filter Edited displays only posts that were edited by the author after initial posting.
-         - Filter Unedited shows posts that were not edited after initial posting.
-         - Entering a string into the topmost entry box and selecting the adjacent “Search For Title” button will search the posts whose title contains the string.
-         - Likewise, entering a string in the lower entry box and selecting “Search For Author” will search for posts whose author’s name contains the entered string.
+SnooSearch uses a preset Reddit account to access the API and display information to the user.
+    - Entering a subredidt name (text after /r/ in the subreddit URL), and clicking "Reload Posts" will populate the main window listbox with a list of posts.
+    - The number of posts and category of posts to show can be changed via a dropdown menu.
+    - This list can be sorted, filtered, and searched by using the sidebar buttons/entryboxes.
+    - Posts in the listbox can be double clicked to open a popup menu.
+        - This pop menu displays the post content (if the post is not just a URL or image) and the post metadata.
+        - This popup menu also includes a button to go directly to the post in the user's browser.
   
 
 # Version History
@@ -54,13 +56,14 @@ SnooSearch reads a .csv file that lists the metadata of the posts, manipulating 
     - Sort by title, ratio, score, and author name.
     - Filter for edited and unedited posts
     - Open a browser window with the loaded post’s URL.
+   
+## 2.0 - 
+    - Modified the program to pull from Reddit's API directly instead of having to use a program.
+    - Changed the UI to incorporate a popup window instead of two separate listboxes.
+    - Made the background blue.
  
 # Future Plans
-    - Add a key column that shows the category of relevance when a user sorts or filters.
-    - Add a error functionality when there is no post selected and the user tries to load post information.
-
-
-
+    - Add a post saving functionality.
 
 # Reference Materials
     - Lundh, Fredrik. “An Introduction to Tkinter (Work in Progress).” Effbot.Org, 2019, effbot.org/tkinterbook/.
