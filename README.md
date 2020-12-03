@@ -12,6 +12,7 @@ Reddit is an online forum comprised of subforums, called subreddits. Each subred
 SnooSearch requires PRAW, which is a Python-based API wrapper for Reddit's API. It can be installed via pip:
 
 pip install praw
+
 pip install --upgrade praw (to update to the latest version)
 
 # What is SnooSearch?
