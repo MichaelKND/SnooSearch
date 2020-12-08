@@ -21,7 +21,8 @@ class PostClassPRAW:
         self.ratio = rawPost.upvote_ratio
         self.comments = rawPost.num_comments
         self.date = datetime.fromtimestamp(rawPost.created_utc)
-        self.edited = rawPost.edited
+        self.isSelf = rawPost.is_self
+        self.stickied = rawPost.stickied
         self.url = rawPost.url
         self.content = rawPost.selftext
 
@@ -32,12 +33,6 @@ POSTS_DATA = []
 def returnListFromSub(sub, category, postLimit) -> list:
     result = []
     subreddit = reddit.subreddit(sub)
-    if category == "controversial":
-        for subpost in subreddit.controversial(limit=postLimit):
-            result.append(PostClassPRAW(subpost))
-    if category == "gilded":
-        for subpost in subreddit.gilded(limit=postLimit):
-            result.append(PostClassPRAW(subpost))
     if category == "hot":
         for subpost in subreddit.hot(limit=postLimit):
             result.append(PostClassPRAW(subpost))
@@ -74,7 +69,7 @@ def show_gui() -> NONE:
     """Create the main window."""
     root_window = Tk()
     root_window.config(background='#24A0ED')
-    root_window.title("Subreddit Parser")
+    root_window.title("SnooSearch")
     root_window.geometry('800x350')
 
     CATEGORY = StringVar()
@@ -152,13 +147,13 @@ def show_gui() -> NONE:
     button_sortByAuthor = Button(displayInteraction, text="Sort By Author",
                                  command=lambda: sortByAuthor(postListbox))
     button_sortByAuthor.grid(row=3, column=0, sticky=W)
-    button_FilterEdited = Button(displayInteraction, text="Filter Edited",
-                                 command=lambda: filterForEdited(postListbox))
-    button_FilterEdited.grid(row=4, column=0, sticky=W)
-    button_FilterUnedited = Button(displayInteraction, text="Filter Unedited",
-                                   command=lambda:
-                                   filterForUnedited(postListbox))
-    button_FilterUnedited.grid(row=5, column=0, sticky=W)
+    button_FilterStickied = Button(displayInteraction, text="Hide Stickied",
+                                   command=lambda: hideStickied(postListbox))
+    button_FilterStickied.grid(row=4, column=0, sticky=W)
+    button_FilterSpecial = Button(displayInteraction, text="Show Self Posts",
+                                  command=lambda:
+                                  filterForSelf(postListbox))
+    button_FilterSpecial.grid(row=5, column=0, sticky=W)
 
     """Creating the Frame for the search buttons and entry buttons."""
     displaySearchFrame = Frame(root_window, bg='#24A0ED', width=600)
@@ -236,20 +231,20 @@ def sortByAuthor(listbox) -> NONE:
     replaceList(listbox, sortedList)
 
 
-def filterForEdited(listbox) -> NONE:
-    """Search for posts that have been edited."""
+def hideStickied(listbox) -> NONE:
+    """Search for posts that have been stickied."""
     listOfResults = []
     for postListing in POSTS_DATA:
-        if 'False' != postListing.edited:
+        if not postListing.stickied:
             listOfResults.append(postListing)
     replaceList(listbox, listOfResults)
 
 
-def filterForUnedited(listbox) -> NONE:
-    """Search for posts that have been edited."""
+def filterForSelf(listbox) -> NONE:
+    """Search for posts that are self posts.."""
     listOfResults = []
     for postListing in POSTS_DATA:
-        if 'False' == postListing.edited:
+        if postListing.isSelf:
             listOfResults.append(postListing)
     replaceList(listbox, listOfResults)
 
@@ -261,6 +256,12 @@ def loadPostInfo(event):
     for postListing in POSTS_DATA:
         if selection in postListing.title:
             postPopup(postListing)
+
+
+def savePost(post):
+    file = open("Saved Posts.txt", "a")
+    file.write(post.title + "\n")
+    file.write(post.url + "\n" + "\n")
 
 
 def postPopup(post):
@@ -312,9 +313,9 @@ def postPopup(post):
     label_postDate = Label(displayPostInfo,
                            text="Date", bg="grey30", fg="white")
     label_postDate.grid(row=5, column=0, sticky=W, padx=10)
-    label_postEdited = Label(displayPostInfo,
-                             text="Edited", bg="grey30", fg="white")
-    label_postEdited.grid(row=6, column=0, sticky=W, padx=10)
+    label_postStickied = Label(displayPostInfo,
+                               text="Stickied", bg="grey30", fg="white")
+    label_postStickied.grid(row=6, column=0, sticky=W, padx=10)
     label_postUrl = Label(displayPostInfo,
                           text="URL", bg="grey30", fg="white")
     label_postUrl.grid(row=7, column=0, sticky=W, padx=10)
@@ -337,9 +338,9 @@ def postPopup(post):
     labelBox_postDate = Label(displayPostInfo, text=post.date,
                               anchor='w', width=78, bg="white")
     labelBox_postDate.grid(row=5, column=1, sticky=W)
-    labelBox_postEdited = Label(displayPostInfo, text=post.edited,
-                                anchor='w', width=78, bg="white")
-    labelBox_postEdited.grid(row=6, column=1, sticky=W)
+    labelBox_postStickied = Label(displayPostInfo, text=post.stickied,
+                                  anchor='w', width=78, bg="white")
+    labelBox_postStickied.grid(row=6, column=1, sticky=W)
     labelBox_postUrl = Label(displayPostInfo, text=post.url,
                              anchor='w', width=78, bg="white")
     labelBox_postUrl.grid(row=7, column=1, sticky=W)
@@ -348,6 +349,11 @@ def postPopup(post):
     button_URL = Button(popUp, text="Go to post", width=50,
                         command=lambda: webbrowser.open(post.url))
     button_URL.grid(row=3, column=0, pady=5, padx=100)
+
+    """Creating the save post button."""
+    button_URL = Button(popUp, text="Save post", width=50,
+                        command=lambda: savePost(post))
+    button_URL.grid(row=4, column=0, pady=5, padx=100)
 
     popUp.mainloop()
 
