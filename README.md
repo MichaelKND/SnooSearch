@@ -62,9 +62,15 @@ SnooSearch uses a preset Reddit account to access the API and display informatio
     - Modified the program to pull from Reddit's API directly instead of having to use a program.
     - Changed the UI to incorporate a popup window instead of two separate listboxes.
     - Made the background blue.
+    
+## 3.0 - 
+    - Removed the "Filter Edited" and "Filter Unedited" options, since they would be of minimal use.
+    - Added the ability to filter out stickied posts.
+    - Added the ability to search for self posts only.
+    - Added a post saving functionality. Creates a "Posts Saved" text file if none exists.
  
 # Future Plans
-    - Add a post saving functionality.
+    - None at the moment.
 
 # Reference Materials
     - Lundh, Fredrik. “An Introduction to Tkinter (Work in Progress).” Effbot.Org, 2019, effbot.org/tkinterbook/.
